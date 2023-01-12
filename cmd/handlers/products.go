@@ -30,7 +30,12 @@ func CreateProduct(c *gin.Context) {
 	var newProduct domain.Product
 	c.BindJSON(&newProduct)
 	createdProduct, _ := services.Create(newProduct)
-	c.JSON(http.StatusCreated, createdProduct)
+	if createdProduct == nil{
+		c.JSON(http.StatusCreated, "El producto no pudo ser creado, el code_value proporcionado ya esta en uso")
+	} else {
+		c.JSON(http.StatusCreated, "El producto fue creado con exito")
+	}
+	
 }
 
 func UpdateProduct(c *gin.Context) {

@@ -29,6 +29,7 @@ func (s *Services) Create(newProduct domain.Product) (*domain.Product, error) {
 	if err := validator.ValidateProduct(&newProduct); err != nil {
 		return nil, err
 	}
+
 	return s.productRepo.Create(newProduct)
 }
 
