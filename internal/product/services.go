@@ -40,6 +40,11 @@ func (s *Services) Update(id int, updatedProduct domain.Product) (*domain.Produc
 	return s.productRepo.Update(id, updatedProduct)
 }
 
+func (s *Services) UpdatePATCHservice(id int, request domain.PatchRequest) (*domain.Product, error) {
+	return s.productRepo.UpdatePATCH(id, request)
+}
+
+
 func (s *Services) Delete(id int) error {
 	return s.productRepo.Delete(id)
 }
@@ -56,4 +61,5 @@ func (s *Services) Search(priceGt float64) ([]domain.Product, error) {
         }
     }
     return filteredProducts, nil
+	
 }

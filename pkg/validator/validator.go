@@ -6,7 +6,7 @@ import (
 	"ProyectoGo/internal/domain"
 )
 
-// ValidateProduct valida los campos de un producto
+// ValidateProduct valida los campos de un producto, comprobando que posea valores validos
 func ValidateProduct(product *domain.Product) error {
     if product.Name == "" {
         return errors.New("El nombre del producto no puede estar vacío")
