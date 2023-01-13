@@ -1,5 +1,8 @@
 ProyectoGo
+
 Este es el repositorio del proyecto ProyectoGo, una aplicación web desarrollada en Go que permite manejar una lista de productos. Esta aplicación fue construida utilizando el framework Gin para manejar las rutas y peticiones HTTP.
+
+![Proyecto creado por Juan Ospina en el desarrollo del Bootcamp Go Meli](/PicProfile.png)
 
 La aplicación cuenta con las siguientes funcionalidades:
 
